@@ -2,7 +2,7 @@
 
 namespace DatingApp.API.Migrations
 {
-    public partial class initroo46u : Migration
+    public partial class initroot13 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
