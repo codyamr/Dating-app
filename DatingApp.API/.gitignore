@@ -1,0 +1,4 @@
+.vcdode
+bin
+obj
+*.db
