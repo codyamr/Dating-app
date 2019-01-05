@@ -39,7 +39,7 @@ namespace DatingApp.API.Data
             return true;
         }
 
-        public Task<NewUser> Register(NewUser user, string Password)
+        public async Task<NewUser> Register(NewUser user, string Password)
         {
             byte[] passwordHash , passwordSalt ;
            CreatePassWordHash( Password, out passwordHash , out passwordSalt);
@@ -48,7 +48,9 @@ namespace DatingApp.API.Data
            _context.NewUsers.AddAsync(user);
            _context.SaveChangesAsync();
 
-            throw new System.NotImplementedException();
+           return user;
+
+           // throw new System.NotImplementedException();
         }
 
         public void CreatePassWordHash(string password, out byte[] passwordHash ,out byte[] passwordSalt)
